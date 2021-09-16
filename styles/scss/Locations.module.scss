@@ -1,0 +1,159 @@
+@import "./mixins";
+.searchSection{
+    @include flexLayout(row,center,flex-start,no-wrap);
+    @include measurements(100%,auto,0 .7rem 0 0, 0 0 0 0,relative,none);
+    z-index: -1;
+    .searchSectionLeft{
+        @include flexLayout(column,space-evenly,flex-start,no-wrap);
+        @include measurements(65%,auto,8.8rem .9rem .4rem 1.4rem,0,relative,none);
+        .searchSectionOne{
+            .firstPara{
+                margin: 0;
+                word-spacing: .1rem;
+            }
+            .headingThree{
+                padding: 0;
+                margin: 0;
+                font-size: 2.25rem;
+                opacity: 0.88;
+            }
+            .unorderList{
+                list-style-type: none;
+                @include flexLayout(row,space-between,center,no-wrap);
+                @include measurements(100%,auto,0,0,relative,none);
+                .links{
+                    text-align: center;
+                    @include spaces(0,1.6rem .9rem .1rem 0,relative,none);
+                    .anchor{
+                        padding: .4rem 1.2rem .6rem 1.2rem;
+                        border-radius: 50px;
+                        background-color: white;
+                        color: black;
+                        cursor: pointer;
+                        border: 1px solid rgba(0,0,0,0.4);
+                        transition: all .6s ease;
+                        &:hover{
+                            background-color: black;
+                            color: white;
+                        }
+                    }
+                }
+                .secondPara{
+                    font-size: .9rem;
+                    a{
+                        text-decoration: underline;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .searchResults{
+            @include flexLayout(column,space-between,flex-start,no-wrap);
+            @include measurements(100%,auto,.6rem 0 0 0,0,relative,none);
+            .searchResultsCards{
+                @include flexLayout(row,space-between,flex-start,no-wrap);
+                @include measurements(100%,auto,.3rem 0 1.3rem 0,.5rem 0 .3rem 0,relative,none);
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+                
+                .searchResultsImage{
+                    @include measurements(30%,29vh,0,0,relative,none);
+                    .iimage{
+                        @include measurements(100%,100%,0,0,relative,none);
+                        object-fit: cover;
+                        border-radius: 19px;
+                        cursor: pointer;
+                    }
+                }
+                .searchResultsContent{
+                    @include flexLayout(column,space-between,flex-start,no-wrap);
+                    @include measurements(67%,30vh,0,0,relative,none);
+                    .searchResultsContentTop{
+                        @include flexLayout(row,space-between,flex-start,no-wrap);
+                        @include measurements(100%,auto,0,0,relative,none);
+                        .searchResultsContentLeft{
+                            @include flexLayout(column,flex-start,flex-start,no-wrap);
+                            @include measurements(92%,auto,0,0,relative,none);
+                            .fourthPara{
+                                padding: 0;
+                                margin: 0;
+                                font-size: .8rem;
+                                font-weight: 400;
+                            }
+                            .headingFour{
+                                padding: 0;
+                                margin: .2rem 0 .2rem 0;
+                                font-size: 1.2rem;
+                                font-weight: 550;
+                                opacity: 0.9;   
+                            }
+                            .fifthPara{
+                                @include measurements(70%,auto,.7rem 0 .1rem 0,0,relative,none);
+                                font-size: .9rem;
+                            }
+                        }
+                        .searchResultsContentRight{
+                            @include flexLayout(column,flex-start,center,no-wrap);
+                            @include measurements(6%,auto,0,0,relative,none);
+                            .heartIcon{
+                                @include measurements(100%,100%,0,0,relative,none);
+                                object-fit: cover;
+                                
+                                cursor: pointer;
+                                opacity: 0.4;
+                                transition: all .6s ease;
+                                &:hover{
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                    .searchResultsContentBottom{
+                        @include flexLayout(row,space-between,center,no-wrap);
+                        @include measurements(100%,auto,0,0,relative,none);
+                        .searchResultsStarIcon{
+                            @include measurements(45%,auto,0,0,relative,none);
+                            @include flexLayout(row,flex-start,flex-end,no-wrap);
+                            .SStarIcon{
+                                @include measurements(8%,auto,0,0,relative,none);
+                                StarIcon{
+                                    @include measurements(100%,100%,0,0,relative,none);
+                                    opacity: 0.9;
+                                    background-color: red;
+                                    cursor: pointer;
+                                }
+                            }
+                            .ratingg{
+                                font-size: 1rem;
+                                color: black;
+                                font-weight: 550;
+                                padding-left: .3rem;
+                                
+                                position: relative;
+                                cursor: pointer;
+
+                            }
+                        }
+                        .searchResultsPrice{
+                            @include flexLayout(column,center,flex-end,no-wrap);
+                            .rightBottomHeadingTwo{
+                                padding: 0;
+                                margin: 0
+                            }
+                            .rightBottomHeadingThree{
+                                padding: .3rem 0 0 0;
+                                margin: 0;
+                                font-size: .99rem;
+                                font-weight: 400;
+                                opacity: 0.7;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .searchSectionRightt{
+        @include measurements(35%,auto,0,0,relative,none);
+        background-color: black;
+    }
+}

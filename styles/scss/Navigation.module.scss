@@ -1,0 +1,15 @@
+@import "./mixins";
+
+
+.headerContainer{
+    @include flexLayout(row,center,center,no-wrap);
+    @include measurements(100%,auto,.31rem,0,relative,none);
+    background-color: rgba(0,0,0,0.8);
+    overflow: hidden;
+    .headerContainerPara{
+        .headerContainerAnchor{
+            color: rgba(255,255,255,0.7);
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+@import "./mixins";
+.footerSection{
+    @include measurements(100%,auto,0,.6rem 0 0 0,relative,none);
+    background-color: whitesmoke;
+    overflow: hidden;
+    .footerSectionInner{
+        @include measurements(87%,56vh,0,auto,relative,none);
+        @include for-mobiles{
+            height: auto;
+        }
+        .footerNavigations{
+            @include flexLayout(row,space-between,center,wrap);
+            @include measurements(100%,auto,0,0,relative,none);
+            @include for-mobiles{
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            .footerSectionInnerNavigations{
+                @include flexLayout(column,flex-start,flex-start,wrap);
+                @include measurements(25%,auto,0,0,relative,none);
+                @include for-mobiles{
+                    width: 50%;
+                    flex-wrap: wrap;
+                }
+                h4{
+                    font-size: .9rem;
+                    padding-top: 2rem;
+                    margin: 0;
+                }
+                ul{
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    li{
+                        margin: .3rem 0 .4rem 0;
+                        margin-left: -2.5rem;
+                        cursor: pointer;
+                        transform: scaleX(1);
+                        transform: transform .8s ease;
+                        &:hover{
+                            transform: scaleX(1.07);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottomFooter{
+         @include flexLayout(row,space-between,space-evenly,no-wrap);
+        @include measurements(87%,auto, .8rem 0 1.3rem 0,auto,relative,none);
+        border-top: 1px solid rgba(0,0,0,0.1);
+        .bottomUnorder{
+            list-style-type: none;
+            @include flexLayout(row, space-evenly,center,no-wrap);
+            @include measurements(40%,auto,0,0,relative,none);
+            .bottomLists{
+                @include spaces(0 .3rem 0 .2rem, 0 .1rem 0 .1rem,relative,none);
+                cursor: pointer;
+                transform: scaleX(1);
+                transform: transform .8s ease;
+                &:hover{
+                    transform: scaleX(1.07);
+                }
+            }
+        }
+       .bottomRight{
+           display: flex;
+           font-weight: 400;
+           h5{
+               padding: 0 .4rem;
+               font-weight: 600;
+               opacity: 0.9;
+               font-size: 1rem;
+           }
+       
+        }
+    }
+}

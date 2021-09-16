@@ -1,0 +1,489 @@
+@import "./mixins";
+.heroBannerSection{
+    @include measurements(100%,92vh,0,0,relative,none);
+    overflow: hidden;
+    .heroBannerSectionMain{
+        min-width: 100%;
+        height: 100vh;
+        position: relative;
+        .BannerSectionNavigation{
+            @include flexLayout(row,space-evenly,center,no-wrap);
+            @include measurements(100%,10%,0rem .6rem,0,sticky,none);
+            overflow: hidden;
+            z-index: 1000;
+            @include for-mobiles{
+                display: none;
+            }
+            .BannerNavigationLogoSection{
+                @include flexLayout(row,center,center,no-wrap);
+                @include measurements(20%,auto,0rem .2rem,0,relative,none);
+                .BannerNavigationLogo{
+                    display: flex;
+                    align-items: center;
+                    @include measurements(12%,auto,.3rem,0,relative,none);
+                    border-radius: 50px;
+                    Image{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        position: relative;
+                        border-radius: 50px;
+                    }
+                }
+                .BNLogoHeadingFour{
+                    display: flex;
+                    align-items: center;
+                    padding-left: .4rem;
+                    @include fonts(1.6rem,400,orange,1);
+                }
+            }
+            .BannerNavigationCenterLinks{
+                @include flexLayout(row,center,center,no-wrap);
+                @include measurements(50%,auto,0rem .2rem,0,relative,none);
+               
+                .BNHeadingFour{
+                    @include fonts(1.1rem,400,white,1);
+                    @include spaces(0 .3rem, 0 .8rem,relative,none);
+                }
+            }
+            .BannerNavigationRightLinks{
+                @include flexLayout(row,space-evenly,center,no-wrap);
+                @include measurements(25%,auto,.3rem  2rem 0 0,0,relative,none);
+                
+                p {
+                   
+                    color: white;
+                    cursor: pointer;
+                    
+                }
+                .BNGlobeIcon{
+                    @include measurements(6%,auto,0,0,relative,none);
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    @include for-mobiles{
+                        width: 7%;
+                    }
+                }
+                .BNMenuAndUserIcon{
+                    @include flexLayout(row,space-between,center,no-wrap);
+                    @include measurements(15%,auto,0,0,relative,none);
+                    background-color: white;
+                    border-radius: 50px;
+                    .BNMenuIcon{
+                        @include measurements(50%,auto,0,0,relative,none);
+                        display: flex;
+                        align-items: center;
+                        color: black;
+                        cursor: pointer;
+                        @include spaces(.1rem .2rem,0,relative,none);
+                    }
+                    .BNUserIcon{
+                        @include measurements(50%,auto,0,0,relative,none);
+                        display: flex;
+                        align-items: center;
+                        color: black;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .BannerSearchEngineSection{
+            @include flexLayout(column,flex-start,center,no-wrap);
+            @include measurements(100%,auto,0,0,relative,none);
+            overflow : hideen;
+            z-index: 1000;
+            @include for-mobiles{
+                
+                display: none;
+            }
+            .BSEngineNavigations{
+                @include flexLayout(row,center,center,no-wrap);
+                @include measurements(65%,10vh,0,auto,relative,none);
+                background-color: white;
+                border-radius: 50px;
+                overflow : hidden;
+                border: 1px solid rgba(0,0,0,0.2);
+                box-shadow: 0 .02rem .1rem rgba(255,255,255,0.1), 0 .03rem .12rem rgba(255,255,255,0.12), 0 .05rem  1.5rem rgba(255,255,255,0.15), 0 0.7rem 1.7rem rgba(255,255,255,0.17), 0  0.9rem 1.9rem rgba(255,255,255,0.2), 0.02rem .8rem 1.7rem rgba(255,255,255,0.15);
+                @include for-mobiles{
+                    width: 95%;
+                }
+                .BSEngineNavigationItems{
+                    @include flexLayout(column,center,flex-start,no-wrap);
+                    @include measurements(21%,100%,0,.3rem 1.4rem .6rem 0,relative,none);
+                    border-right: 1px solid rgba(0,0,0,0.1);
+                    cursor: pointer;
+                    padding-left: 1.2rem;
+                    padding-right: .7rem;
+                    &:hover{
+                        border-radius: 50px;
+                        background-color: whitesmoke;
+                    }
+                    &:nth-child(1){
+                        padding-left: 1.6rem;
+                    }
+                   
+                    .BSEngineParagraph{
+                        @include fonts(.92rem,650,black,1);
+                        padding: 0;
+                        margin: 0;
+                        
+                    }
+                    .BSEngineForm{
+                        input{
+                            border: none;
+                            outline: none;
+
+                        }
+                    }
+                    &:hover .BSEngineForm input{
+                        background-color: whitesmoke
+                    }
+                }
+                .BSEngineSearchIcon{
+                    @include measurements(13%,100%,0,0,none,relative);
+                    display: flex;
+                    align-items: center;
+                    background-color: deeppink;
+                    border-radius: 140px;
+                    transition: all .9s ease;
+                    color: white;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: red;
+                        color: white;
+                    }
+                    .BSEngineSearch{
+                        border: none;
+                        outline: none;
+                        font-size: 1.1rem;
+                        color: white;
+                        margin-left: 1rem;
+                        cursor: pointer;
+                        background-color: transparent;
+                    }
+                }
+            }
+            .guestsSection{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                @include measurements(27%,31vh,1.2rem 1.7rem .7rem 1.7rem,0 0 0 34rem,relative,none);
+                background-color: white;
+                border: 1px solid white;
+                border-radius: 30px;
+                margin-top: 1rem;
+                .guestsCards{
+                    @include flexLayout(row,space-between,center,no-wrap);
+                    @include measurements(100%,100%,0,.3rem 0 .5rem 0,relative,none);
+                    border-bottom: 1px solid rgba(0,0,0,0.1);
+                    .leftGuest{
+                        @include flexLayout(column,center,space-between,no-wrap);
+                        @include measurements(100%,auto, 0 0 .5rem 0,0,relative, none);
+                        border-radius: 1px solid rgba(0,0,0,0.3);
+                        h5{
+                            padding: 0;
+                            margin: 0;
+                        }
+                        p{
+                            padding: 0;
+                            margin: 0
+                        }
+                    }
+                    .rightGuest{
+                        @include flexLayout(row,space-between,center,no-wrap);
+                        p{
+                            margin-right: 4.5rem;
+                        }
+                        .minusIcon{
+                            @include spaces(0 1.4rem .2rem .4rem,0 .2rem 0 0,relative,none);
+                            font-size: .8rem;
+                            width: 30%;
+                            height: 10%;
+                            display: flex;
+                            align-items: center;
+                            background-color: white;
+                            color: black;
+                            border: 1px solid rgba(0,0,0,0.6);
+                            border-radius: 50px;
+                            cursor: pointer;
+                            transition: all .7s ease;
+                            &:hover{
+                                background-color: black;
+                                color: white;
+                            }
+                        }
+                        .value{
+                            @include spaces(0 0 0 1rem ,0 .2rem 0 0,relative,none);
+                            font-size: 1rem;
+                            width: 30%;
+                            display: flex;
+                            align-items: center;
+                            height: 10%;
+                           
+                        }
+                        .plusIcon{
+                             @include spaces(0 .3rem .2rem .2rem,0 .2rem 0 0,relative,none);
+                            font-size: .8rem;
+                            width: 30%;
+                            display: flex;
+                            align-items: center;
+                            height: 10%;
+                            border: 1px solid rgba(0,0,0,0.6);
+                            border-radius: 50px;
+                            cursor: pointer;
+                            background-color: white;
+                            color: black;
+                            transition: all .7s ease;
+                            &:hover{
+                                background-color: black;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                button{
+                    @include spaces(.7rem 1.3rem, .4rem 0 .6rem,relative,none);
+                    background-color: deeppink;
+                    color: white;
+                    font-size: .9rem;
+                    outline: none;
+                    border-radius: 50px;
+                    cursor: pointer;
+    
+                }
+            }
+        }        
+        .BannerHeroSection{
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            .BannerHerSectionVideo{
+                position: relative;
+                width: 53%;
+                height: 100vh;
+                @include for-mobiles{
+                    width: 100%;
+                }
+                video{
+                    position: relative;
+                    width: 100%;
+                    height: 100vh;
+                    object-fit: cover;
+                    source{
+                        position: relative;
+                        width: 100%;
+                        height: 100vh;
+                    }
+                }
+            }
+            .BannerHeroSectionContent{
+                @include for-mobiles{
+                    position: absolute;
+                    top: 25;
+                    left: 50;
+                    z-index: 1000;
+                    width: 100%;
+                    background-color: transparent;
+                    
+                }
+                @include measurements(47%,100%,0,0,relative,none);
+                background-color: black;
+                @include flexLayout(column,center,center,no-wrap);
+                h4{
+                    @include fonts(4rem,700,white,1);
+                    padding: 0;
+                    margin: 0;
+                    &:nth-child(1){
+                        @include for-mobiles{
+                            font-size: 4.6rem;
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                    &:nth-child(2){
+                        @include for-mobiles{
+                            font-size: 2.4rem;
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                    &:nth-child(2){
+                        color: black;
+                        stroke: deeppink;
+                        stroke-width: 361rem;
+                        
+                        text-shadow: 0 0 0.8rem rgba(255,255,255,0.12),
+                                     0 0 .9rem rgba(255,255,255,0.18),
+                                     0 0 .9rem rgba(255,255,255,0.19),
+                                     0 0 .9rem rgba(255,255,255,0.77);
+                    }
+                }
+                .heroSectionHeadingFour{
+                    width: 85%;
+                    align-items: center;
+                    text-align: center;
+                    position: relative;
+                    color: black;
+                    
+                }
+                .heroSectionHeadingFour::after{
+                    content : "";
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-left: 1px solid black;
+                    background-color: black;
+                    animation: typing 5.5s steps(60) infinite alternate;
+                    @include for-mobiles{
+                        display: none;
+                    }
+                }
+                @keyframes typing {
+                    100%{
+                        left: 89.8%;
+                        
+                    }
+                }
+                div{
+                    button{
+                        @include fonts(.9rem,500,white,1);
+                        background-color:deeppink;
+                        @include spaces(.9rem 1.4rem,2.3rem 0 1.9rem 0,relative,none);
+                        outline: none;
+                        border: none;
+                        border-radius: 10px;
+                        animation-name: grow;
+                        animation-timing-function: linear;
+                        animation-duration: 1.3s;
+                        animation-iteration-count: infinite;
+                        animation-fill-mode: forwards;
+                        animation-direction: alternate;
+                        @include for-mobiles{
+                            margin-top: 1.2rem;
+                        }
+                    }
+                    @keyframes grow {
+                        0%{
+                            transform: scale(.7);
+                        }
+                        100%{
+                            transform: scale(.92)
+                        }
+                    }
+                }
+            }
+        }
+        .PrivacySection{
+            @include measurements(100%,auto,0,0,absolute,none);
+            top: 71%;
+            z-index: 2000;
+            display: block;
+            @include for-mobiles{
+                top: 69%;
+                position: fixed;
+                display: none;
+            }
+            .PrivacySectionInner{
+                display: flex;
+                flex-direction: column;
+                @include measurements(91%,auto,1.1rem .9rem,auto,relative,none);
+                background-color: white;
+                color: black;
+                @include for-mobiles{
+                    padding: .1rem .4rem .1rem .2rem;
+                }
+                h5{
+                    @include fonts(.9rem,500,black,1);
+                    padding-left : .5rem;
+                    margin: 0;
+                }
+                .PrivacySectionContent{
+                    @include flexLayout(row,space-between,center,no-wrap);
+                    @include measurements(100%,auto,0,.7rem .6rem,relative,none);
+                    @include for-mobiles{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                    }
+                    .PrivacyParagraph{
+                        @include measurements(71%,auto,0,0,relative,none);
+                        @include fonts(1rem,400,black,0.8);
+                        @include for-mobiles{
+                            width: 100%;
+                            font-size: .9rem;
+                        }
+                    }
+                    .PrivacySectionButtons{
+                        @include flexLayout(row,space-between,center,no-wrap);
+                        @include measurements(35%,auto,0 .6rem 0 0,0,relative,none);
+                        @include for-mobiles{
+                            width: 100%;
+                        }
+                        .PrivacySectionButtonOne{
+                            @include measurements(62%,auto,0,0,relative,none);
+                            .PrivacySectionOne{
+                                @include measurements(100%,auto,0,0,relative,none);
+                                @include fonts(1.1rem,550,black,1);
+                                @include spaces(.9rem 1.9rem,0,relative,none);
+                                border: 1px solid rgba(0,0,0,0.9);
+                                outline: none;
+                                cursor: pointer;
+                                border-radius: 3px;
+                                background-color: white;
+                                transition: all 1.9s ease;
+                                &:hover{
+                                    background-color: black;
+                                    color: white;
+                                }
+                                @include for-mobiles{
+                                    font-size: 1rem;
+                                    padding: .7rem 1.1rem;
+                                }
+                                
+                            }
+                            &:hover ~ .PrivacySectionButtonTwo  .PrivacySectionTwo{
+                                background-color: white;
+                                color: black;
+                            }
+                        }
+                        .PrivacySectionButtonTwo{
+                            @include measurements(37%,auto,0,0,relative,none);
+                            .PrivacySectionTwo{
+                                @include measurements(100%,auto,0,0,relative,none);
+                                @include fonts(1.1rem,550,white,1);
+                                @include spaces(.9rem 1.9rem,0,relative,none);
+                                border: 1px solid rgba(0,0,0,0.9);
+                                outline: none;
+                                cursor: pointer;
+                                border-radius: 3px;
+                                background-color: black;
+                                transition: all 1.9s ease;
+                                &:hover{
+                                    background-color: white;
+                                    color: black;
+                                }
+                                @include for-mobiles{
+                                    padding: .7rem 1.1rem;
+                                }
+                            }
+                            &:hover & .PrivacySectionButtonOne .PrivacySectionOne{
+                                background-color: black;
+                                color: white;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}

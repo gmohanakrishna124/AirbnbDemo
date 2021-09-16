@@ -1,0 +1,40 @@
+@import "./mixins";
+.registerNavigation{
+    @include flexLayout(row,center,center,no-wrap);
+    @include measurements(100%,auto,.02rem .9rem,0,relative,none);
+    background-color: white;
+    box-shadow: 0 .08rem .08rem rgba(0,0,0,0.06);
+    .registerNavigationLeft{
+        @include flexLayout(row,flex-start,center,no-wrap);
+        @include measurements(20%,auto,0,0,relative,none);
+        .registerNavigationLeftImage{
+            @include measurements(10%,auto,0,0,relative,none);
+            .registerNavigationLeftImageInner{
+                @include measurements(100%,100%,0,0,relative,none);
+                
+            }
+        }
+        h4{
+            font-size: 1.3rem;
+        }
+    }
+    .registerNavigationCenter{
+        @include flexLayout(row,flex-end,center,no-wrap);
+        @include measurements(40%,auto,0,0,relative,none);
+        border-radius: 50px;
+        border: 1px solid rgba(0,0,0,0.14);
+        .registerNavigationCenterPara{
+            height: 100%;
+            @include spaces(.3rem 1.2rem .4rem 1.2rem,0,relative,none);
+            background-color: deeppink;
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 50px;
+        }
+    }
+    .registerNavigationRight{
+        @include flexLayout(row,space-evenly,center,no-wrap);
+        @include measurements(20%,auto,0,0,relative,none);
+
+    }
+}

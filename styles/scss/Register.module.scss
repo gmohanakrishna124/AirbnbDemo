@@ -1,0 +1,103 @@
+@import "./mixins";
+.registerMainSection{
+    @include flexLayout(column,center,center,no-wrap);
+    @include measurements(100%,auto,0 0 2.8rem 0,0,relative,none);
+    background-color: whitesmoke;
+    .registerMainSectionInner{
+        @include flexLayout(column,space-between,flex-start,no-wrap);
+        @include measurements(30%,auto, 0,auto,relative,none);
+        .registerMainSectionInnerHeader{
+            @include flexLayout(column,center,center,no-wrap);
+            @include measurements(100%,auto,0, 1.9rem 0 1.9rem 0,relative,none);
+            .registerMainHeaderHeadingTwo{
+                font-size: 1.9rem;
+                padding: 0;
+                margin: 0;
+            }
+            .registerMainHeaderfirstPara{
+                padding: 0;
+                margin: .5rem 0 0 0;
+                font-size: .9rem;
+                width: 83%;
+                text-align: center;
+            }
+        }
+        .registerMainSectionform{
+            @include flexLayout(column,space-between,flex-start,no-wrap);
+            @include measurements(90%,auto,.9rem 2.1rem,auto,relative,none);
+            border: 1px solid rgba(0,0,0,0.1);
+            background-color: white;
+            border-radius: 9px;
+            .registerMainSectionformHeader{
+                @include flexLayout(column,center,flex-start,no-wrap);
+                @include measurements(100%,auto,0,0,relative,none);
+                .registerMainFormFirstPara{
+                    @include fonts(.9rem,black,550,1);
+                }
+            }
+            .registerMainSectionFormSubHeader{
+                @include flexLayout(row,center,center,no-wrap);
+                @include measurements(100%,auto,0,.6rem 0 .4rem 0,relative,none);
+                .registerMainSubHeaderFirstCard{
+                    @include measurements(30%,.06rem,0,.2rem 0 0 0,relative,none);
+                    background-color: rgba(0,0,0,0.13);
+                }
+                .registerMainSubHeaderFirstPara{
+                    @include measurements(40%,auto,0,auto,relative,none);
+                    font-size: .8rem;
+                    text-align: center;
+                }
+            }
+            .registerMainSectionFormMain{
+                @include flexLayout(column,space-between,flex-start,no-wrap);
+                @include measurements(100%,auto,0,0,relative,none);
+                .registerMainSectionFormMainInner{
+                    @include flexLayout(column,center,flex-start,no-wrap);
+                    @include measurements(100%,auto,0 ,.5rem 0 .6rem 0,relative,none);
+                    .registerMainSectionInnerHeading{
+                        @include fonts(.8rem,black,650,1);
+                        padding: 0 0 .3rem .02rem;
+                        margin: 0;
+                    }
+                    .registerMainSectionInnerInput{
+                        @include measurements(100%,4.5vh,.2rem 0 .2rem .6rem,0,relative,none);
+                        border: 1px solid rgba(0,0,0,0.2);
+                        border-radius: 10px;
+                        &:focus{
+                            outline: none;
+                            border: 1px solid rgba(0,0,0,0.7)
+                        }
+                    }
+                }
+            }
+            .registerMainSectionFormSumbit{
+                @include flexLayout(row,center,center,no-wrap);
+                @include measurements(100%,4.6vh,0,.9rem 0 .3rem 0,relative,none);
+                background-color:mediumblue;
+                cursor: pointer;
+                border-radius: 10px;
+                transition: all .9s ease;
+                button{
+                    color: white;
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                }
+                &:hover{
+                    background-color: deeppink;
+                    color: white;
+                }
+            }
+            .registerMainSectionFooter{
+                @include measurements(100%,auto,0,.4rem 0 .4rem 0,relative,none);
+                @include fonts(.9rem,black,400,1);
+                a{
+                    color: black;
+                    font-weight: 600;
+                    font-size: .93rem;
+                }
+            }
+        }
+    }
+}

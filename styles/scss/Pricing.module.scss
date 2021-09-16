@@ -1,0 +1,214 @@
+@import "./mixins";
+.pricingMainSection{
+    @include flexLayout(row,center,center,no-wrap);
+    @include measurements(100%,auto,2.5rem 0 1.5rem 0,0,relative,none);
+    background-color: whitesmoke;
+    overflow: hidden;
+    .pricingMainSectionInner{
+        @include flexLayout(column,space-between,flex-start,no-wrap);
+        @include measurements(52%,auto,0,0,relative,none);
+        .pricingMainSectionHeader{
+            @include flexLayout(column,space-between,center,no-wrap);
+            @include measurements(100%,auto,.6rem 0,0,relative,none);
+            .pricingMainHeadingOne{
+                @include fonts(2.9rem,black,600,1);
+                @include spaces(0,.3rem 0 .8rem 0,relative,none);
+            }
+            .pricingMainNavigationItem{
+                list-style-type: none;
+                @include flexLayout(row,space-between,center,no-wrap);
+                @include measurements(45%,auto, 0,auto,relative,none);
+                background-color: orange;
+                color: white;
+                border-radius: 10px;
+                .pricingMainNavigationItems{
+                    cursor: pointer;
+                    &:nth-child(odd){
+                        text-align: center;
+                        @include measurements(30%,100%,.7rem .2rem,0,relative,none);
+                    }
+                    &:nth-child(even){
+                        @include measurements(40%,100%,.7rem .2rem,0,relative,none);
+                        background-color: white;
+                        color: black;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .pricingMainCards{
+            @include flexLayout(row,space-between,center,no-wrap);
+            @include measurements(100%,auto,0,1.3rem 0 0 0,relative,none);
+            .pricingMainCardOne{
+                @include measurements(48%,auto,0,0,relative,none);
+                background-color: white;
+                border-radius: 12px;
+                .pricingMainCardOneInner{
+                    @include flexLayout(column,space-between,flex-start,no-wrap);
+                    @include measurements(100%,100%,0 1.1rem .9rem 1.1rem,0,relative,none);
+                    .pricingMainCardOneHeadingFive{
+                        @include fonts(.9rem,black,500,1);
+
+                    }
+                    .pricingMainCardOneMain{
+                        @include flexLayout(column,center,flex-start,no-wrap);
+                        @include measurements(100%,auto,.5rem 0 .4rem 0,.1rem 0 2.1rem 0,relative,none);
+                        .pricingMainCardOneMainHeadingOne{
+                            @include fonts(2.5rem,black,550,1);
+                            @include spaces(0,0,relative,none);
+                        }
+                        .pricingMainCardOneMainPara{
+                            @include fonts(.87rem,black,400,1);
+                            @include spaces(0,0,relative,none);
+                        }
+                    }
+                    .pricingMainCardOneButton{
+                        @include flexLayout(row,center,center,no-wrap);
+                        @include measurements(100%,5vh,.4rem 0  .4rem 0,auto,relative,none);
+                        cursor: pointer;
+                        button{
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+                            color: white;
+                            background-color: black;
+                            cursor: pointer;
+                            transition: all .9s ease;
+                            border-radius: 10px;
+                             @include measurements(100%,5vh,.4rem 0  .4rem 0,0,relative,none);
+                             &:hover{
+                                background-color: orangered;
+                                color: white;
+
+                            }
+                        }
+                    }
+                }
+            }
+            .pricingMainCardTwo{
+                @include measurements(48%,auto,0,0,relative,none);
+                background-color: white;
+                border-radius: 10px;
+                .pricingMainCardTwoInner{
+                    @include flexLayout(column,space-between,flex-start,no-wrap);
+                    @include measurements(100%,100%,0 1.1rem .9rem 1.1rem,0,relative,none);
+                    .pricingMainCardTwoTop{
+                        @include flexLayout(row,space-between,flex-start,no-wrap);
+                        @include measurements(100%,auto,0,0,relative,none);
+                        .pricingMainCardTwoTopleft{
+                            @include flexLayout(column,space-between,flex-start,no-wrap);
+                            @include measurements(60%,auto,0,0,relative,none);
+                            .pricingMainCardTwoLeftHeadingFive{
+                                @include fonts(1rem,black,500,1);
+                                position: relative;
+                            }
+                            .pricingMainCardTwoLeftBottom{
+                                @include measurements(100%,auto,0,0 0 2rem 0,relative,none);
+                                @include flexLayout(column,center,flex-start,no-wrap);
+                                .pricingTwoLeftHeadingOne{
+                                    @include fonts(2.9rem,black,550,1);
+                                    @include spaces(0,0,relative,none);
+                                    span{
+                                        font-size: 1rem;
+                                        color: black;
+                                        font-weight: 400;
+                                    }
+                                }
+                                .pricingTwoLeftHeadingPara{
+                                    @include fonts(.9rem,black,400,1);
+                                    @include spaces(0,0,relative,none);
+                                }
+                            }
+                        }
+                        .pricingMainCardTwoTopRight{
+                            @include flexLayout(row,flex-start,flex-start,no-wrap);
+                            @include measurements(40%,auto,0,0,relative,none);
+                            .pricingMainCardTwoTopRightPara{
+                                background-color: black;
+                                color: white;
+                                padding: 0;
+                                margin: 0;
+                                width: 100%;
+                                cursor: pointer;
+                                @include spaces(.1rem 0 .1rem .2rem ,0,relative,none);
+                                border-radius: 4px;
+                                transition: all .9s ease;
+                                sup{
+                                    padding-left: .3rem;
+                                }
+                                &:hover{
+                                    background-color: deeppink;
+                                    color: white;
+                                }
+                            }
+                        }
+                    }
+                    .pricingMainCardTwoButton{
+                        @include flexLayout(row,center,center,no-wrap);
+                        @include measurements(100%,auto,0,0,relative,none);
+                        cursor: pointer;
+                        button{
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+                            color: white;
+                            background-color: black;
+                            cursor: pointer;
+                            transition: all .9s ease;
+                            border-radius: 10px;
+                             @include measurements(100%,5vh,.4rem 0  .4rem 0,0,relative,none);
+                             &:hover{
+                                background-color: orangered;
+                                color: white;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.pricingQuestionsSection{
+    @include measurements(100%,auto,6rem 0 0 0,0rem 0 0 0,relative,none);
+    background-color: whitesmoke;
+    overflow: hidden;
+    .pricingQuestionsSectionInner{
+        @include flexLayout(row,space-between,flex-start,no-wrap);
+        @include measurements(90%,auto,.8rem .3rem,auto,relative,none);
+        .pricingQuestionsSectionLeft{
+            @include flexLayout(column,flex-start,flex-start,no-wrap);
+            @include measurements(30%,auto,0,0,relative,none);
+            .pricingQuestionHeadingOne{
+                @include spaces(0,0 0 .7rem 0,relative,none);
+                @include fonts(2.5rem,black,550,1);
+                width: 100%;
+            }
+            .pricingQuestionfirstPara{
+                width: 90%;
+                @include spaces(0,0,relative,none);
+                @include fonts(.93rem,black,400,1);
+                a{
+                    font-weight: 550;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .pricingQuestionSectionRight{
+            @include flexLayout(column,space-between,flex-start,no-wrap);
+            @include measurements(67%,auto,.9rem 0 0 0 ,0 0 0 .5rem,relative,none);
+            .pricingQuestionSectionCard{
+                @include flexLayout(column,center,flex-start,no-wrap);
+                @include measurements(100%,auto,0,0 0 2.8rem,relative,none);
+                .pricingQuestionHeadingFour{
+                    @include spaces(0,0 0 .8rem 0,relative,none);
+                    @include fonts(1.1rem,black,550,0.7);
+                }
+                .pricingQuestionPara{
+                    @include spaces(0,.3rem 0 0 0,relative,none);
+                    @include fonts(.95rem,black,400,1);
+                }
+            }
+        }
+    }
+}

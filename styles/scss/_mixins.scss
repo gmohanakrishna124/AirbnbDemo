@@ -1,0 +1,47 @@
+@mixin flexLayout($direction,$justifyContent,$alignItems,$wrap){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-wrap: $wrap;
+}
+@mixin measurements($width,$height,$padding,$margin,$position,$border){
+    width: $width;
+    height: $height;
+    padding: $padding;
+    margin: $margin;
+    position: $position;
+    border: $border;
+}
+@mixin spaces($padding,$margin,$position,$border){
+    padding: $padding;
+    margin: $margin;
+    position: $position;
+    border: $border;
+}
+@mixin fonts($fontSize,$fontWeight,$fontColor,$fontOpacity){
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    color: $fontColor;
+    opacity: $fontOpacity;
+}
+@mixin for-laptops(){
+    @media (min-width: 986px) and (max-width: 1128px){
+        @content;
+    }
+}
+@mixin for-tablets(){
+    @media (min-width: 660px) and (max-width: 987px){
+        @content;
+    }
+}
+@mixin for-mobiles(){
+    @media (max-width: 650px){
+        @content;
+    }
+}
+@mixin for-extra-small-mobiles(){
+    @media (max-width: 470px){
+        @content;
+    }
+}

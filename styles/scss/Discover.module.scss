@@ -1,0 +1,61 @@
+@import "./mixins";
+.homeThirdSection{
+    @include measurements(100%,auto,0,.4rem 0 .2rem 0,relative,none);
+    h2{
+        padding-left: 5.5rem;
+        font-size: 1.9rem;
+        @include for-mobiles{
+            padding-left: .36rem;
+
+        }
+    }
+    .homeThirdSectionInner{
+        @include flexLayout(row,space-between,center,no-wrap);
+        @include measurements(87%,auto,0,auto,relative,none);
+        @include for-mobiles{
+            overflow: scroll;
+            min-width: 96%;
+        }
+        .homeThirdSectionCards{
+            @include flexLayout(column,space-between,flex-start,no-wrap);
+            @include measurements(32.7%,59vh,0,0,relative,none);
+            @include for-mobiles{
+                min-width: 70%;
+                margin-bottom: 1.3rem;
+                overflow: scroll;
+                margin-right: .7rem;
+            }
+            @include for-extra-small-mobiles{
+                min-width: 80%;
+                margin-bottom: 1.3rem;
+                overflow: scroll;
+                margin-right: .7rem;
+            }
+            .homeThirdSectionImages{
+                @include measurements(100%,100%,0,0,relative,none);
+                .homeThirdSectionImagess{
+                     @include measurements(100%,100%,0,0,relative,none);
+                     object-fit:cover;
+                     border-radius: 10px;
+                     cursor: pointer;
+                }
+            }
+            .homeThirdSectionContent{
+                padding: 0;
+                margin-top: .3rem;
+                h4{
+                    font-size: 1.24rem;
+                    padding: 0;
+                    margin:0;
+                    font-weight: 550;
+                    opacity: 0.83;
+                }
+                p{
+                    padding: 0;
+                    margin: 0;
+                    @include fonts(.93rem,black,400,0.9);
+                }
+            }
+        }
+    }
+}
