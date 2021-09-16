@@ -78,7 +78,7 @@ const  registe = () => {
                         </div>
 
                         <div className = {registerStyle.registerMainSectionFormSumbit}>
-                            <button type= "submit">Create Account</button>
+                            <button type= "submit" onclick = {()=>{router.push("/")}}>Create Account</button>
                         </div>
                         <p className = {registerStyle.registerMainSectionFooter}>By sigining up you Agree to Airbnb <a href= "#">Terms of Service</a></p>
                     </form>
